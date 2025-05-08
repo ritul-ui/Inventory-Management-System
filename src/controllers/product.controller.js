@@ -7,7 +7,9 @@ export default class ProductController{
         let products = ProductModel.get();
         console.log("products", products);
         console.log(path.resolve());
-         return    res.sendFile(path.join(path.resolve(), "src", "views", "products.html"));
+        res.render("products", {products : products});
+
+        //  return    res.sendFile(path.join(path.resolve(), "src", "views", "products.html"));
          //view is served by controller
     }
 }
