@@ -28,6 +28,8 @@ server.use(expressLayouts)
 server.get("/", productController.getProducts );
 server.get("/new", productController.getAddForm);
 server.post('/', validateRequest, productController.addNewProduct );
+server.get("/update-product/:id", productController.getUpdateProductView);
+server.post("/update-product", productController.postUpdateProduct);
 
 
 
