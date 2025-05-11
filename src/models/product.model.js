@@ -24,6 +24,11 @@ export default class ProductModel{
       return   products.find(p=> p.id == id);
     }
 
+    static delete(id){
+      const index = products.findIndex(p => p.id == id);
+       products.splice(index, 1);
+    }
+
 
     //static method don't need to be instantiated
 }
